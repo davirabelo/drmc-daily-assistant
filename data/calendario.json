@@ -1,0 +1,806 @@
+[
+  {
+    "date": "01-01",
+    "name": "Confraternização Universal",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "01-04",
+    "name": "Dia Mundial do Braille",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-06",
+    "name": "Dia de Reis",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-07",
+    "name": "Dia do Leitor",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-09",
+    "name": "Dia do Astronauta",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-20",
+    "name": "Dia do Farmacêutico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-24",
+    "name": "Dia Internacional da Educação",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-25",
+    "name": "Aniversário de São Paulo",
+    "type": "Data local"
+  },
+  {
+    "date": "01-30",
+    "name": "Dia da Saudade",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "01-31",
+    "name": "Dia do Engenheiro Ambiental",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-04",
+    "name": "Dia Mundial do Câncer",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-05",
+    "name": "Dia Nacional da Mamografia",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-11",
+    "name": "Dia Internacional das Mulheres e Meninas na Ciência",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-13",
+    "name": "Dia Mundial do Rádio",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-14",
+    "name": "Dia de São Valentim",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-19",
+    "name": "Dia do Esportista",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-20",
+    "name": "Dia Mundial da Justiça Social",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-24",
+    "name": "Dia da Conquista do Voto Feminino",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-27",
+    "name": "Dia Nacional do Livro Didático",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "02-28",
+    "name": "Dia Mundial das Doenças Raras",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-01",
+    "name": "Dia do Turismo Ecológico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-03",
+    "name": "Dia Mundial da Audição",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-08",
+    "name": "Dia Internacional da Mulher",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-10",
+    "name": "Dia do Telefone",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-12",
+    "name": "Dia do Bibliotecário",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-14",
+    "name": "Dia Nacional dos Animais",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-15",
+    "name": "Dia do Consumidor",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-20",
+    "name": "Dia Internacional da Felicidade",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-21",
+    "name": "Dia Internacional contra a Discriminação Racial",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-21",
+    "name": "Dia Mundial da Síndrome de Down",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-22",
+    "name": "Dia Mundial da Água",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-27",
+    "name": "Dia Mundial do Teatro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "03-31",
+    "name": "Dia da Saúde e Nutrição",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-02",
+    "name": "Dia Mundial de Conscientização do Autismo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-04",
+    "name": "Dia Mundial dos Animais de Rua",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-06",
+    "name": "Dia Mundial da Atividade Física",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-07",
+    "name": "Dia Mundial da Saúde",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-07",
+    "name": "Dia do Jornalista",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-18",
+    "name": "Dia Nacional do Livro Infantil",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-19",
+    "name": "Dia dos Povos Indígenas",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-21",
+    "name": "Tiradentes",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "04-22",
+    "name": "Descobrimento do Brasil",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-22",
+    "name": "Dia da Terra",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-23",
+    "name": "Dia Mundial do Livro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-26",
+    "name": "Dia Nacional de Prevenção e Combate à Hipertensão",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "04-28",
+    "name": "Dia Mundial da Segurança e Saúde no Trabalho",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-01",
+    "name": "Dia do Trabalhador",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "05-05",
+    "name": "Dia Mundial da Higienização das Mãos",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-08",
+    "name": "Dia Mundial da Cruz Vermelha",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-12",
+    "name": "Dia Internacional da Enfermagem",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-13",
+    "name": "Abolição da Escravatura",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-15",
+    "name": "Dia do Assistente Social",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-17",
+    "name": "Dia Internacional contra a Homofobia",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-18",
+    "name": "Dia Nacional da Luta Antimanicomial",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-18",
+    "name": "Combate ao Abuso e à Exploração Sexual de Crianças e Adolescentes",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-19",
+    "name": "Dia do Físico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-20",
+    "name": "Dia do Técnico e Auxiliar de Enfermagem",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-20",
+    "name": "Dia do Pedagogo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-25",
+    "name": "Dia da Indústria",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-28",
+    "name": "Dia Internacional de Luta pela Saúde da Mulher",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "05-31",
+    "name": "Dia Mundial sem Tabaco",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-01",
+    "name": "Dia da Imprensa",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-03",
+    "name": "Dia Mundial da Bicicleta",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-05",
+    "name": "Dia Mundial do Meio Ambiente",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-09",
+    "name": "Dia da Imunização",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-12",
+    "name": "Dia dos Namorados",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-14",
+    "name": "Dia Mundial do Doador de Sangue",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-18",
+    "name": "Dia do Químico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-21",
+    "name": "Início do Inverno",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-24",
+    "name": "Dia de São João",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-26",
+    "name": "Dia Internacional contra o Abuso e Tráfico Ilícito de Drogas",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-28",
+    "name": "Dia Internacional do Orgulho LGBTQIA+",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "06-29",
+    "name": "Dia de São Pedro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-02",
+    "name": "Dia do Bombeiro Brasileiro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-06",
+    "name": "Dia Mundial das Zoonoses",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-08",
+    "name": "Dia Nacional da Ciência",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-10",
+    "name": "Dia da Saúde Ocular",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-13",
+    "name": "Dia Mundial do Rock",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-15",
+    "name": "Dia Nacional do Homem",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-20",
+    "name": "Dia do Amigo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-25",
+    "name": "Dia do Motorista",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-26",
+    "name": "Dia dos Avós",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-27",
+    "name": "Dia Nacional da Prevenção de Acidentes do Trabalho",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "07-28",
+    "name": "Dia do Agricultor",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-05",
+    "name": "Dia Nacional da Saúde",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-08",
+    "name": "Dia Nacional de Combate ao Colesterol",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-11",
+    "name": "Dia do Estudante",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-11",
+    "name": "Dia do Advogado",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-12",
+    "name": "Dia Internacional da Juventude",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-19",
+    "name": "Dia Mundial da Fotografia",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-22",
+    "name": "Dia do Folclore",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-25",
+    "name": "Dia do Soldado",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-27",
+    "name": "Dia do Psicólogo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-29",
+    "name": "Dia Nacional de Combate ao Fumo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "08-31",
+    "name": "Dia do Nutricionista",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-01",
+    "name": "Dia do Profissional de Educação Física",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-05",
+    "name": "Dia da Amazônia",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-07",
+    "name": "Independência do Brasil",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "09-08",
+    "name": "Dia Mundial da Alfabetização",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-09",
+    "name": "Dia do Administrador",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-10",
+    "name": "Dia Mundial de Prevenção ao Suicídio",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-15",
+    "name": "Dia do Cliente",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-16",
+    "name": "Dia Internacional para a Preservação da Camada de Ozônio",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-21",
+    "name": "Dia da Árvore",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-21",
+    "name": "Dia Nacional de Luta da Pessoa com Deficiência",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-22",
+    "name": "Dia Mundial Sem Carro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-25",
+    "name": "Dia Nacional do Trânsito",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-27",
+    "name": "Dia Mundial do Turismo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "09-30",
+    "name": "Dia da Secretária",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-01",
+    "name": "Dia Internacional da Pessoa Idosa",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-01",
+    "name": "Dia Mundial do Vegetarianismo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-04",
+    "name": "Dia Mundial dos Animais",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-05",
+    "name": "Dia Mundial dos Professores",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-10",
+    "name": "Dia Mundial da Saúde Mental",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-12",
+    "name": "Nossa Senhora Aparecida",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "10-12",
+    "name": "Dia das Crianças",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-13",
+    "name": "Dia do Fisioterapeuta e do Terapeuta Ocupacional",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-15",
+    "name": "Dia do Professor",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-16",
+    "name": "Dia Mundial da Alimentação",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-18",
+    "name": "Dia do Médico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-19",
+    "name": "Dia do Profissional de Informática",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-25",
+    "name": "Dia do Dentista",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-28",
+    "name": "Dia do Servidor Público",
+    "type": "Ponto facultativo — calendário federal"
+  },
+  {
+    "date": "10-29",
+    "name": "Dia Nacional do Livro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "10-31",
+    "name": "Halloween",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-01",
+    "name": "Dia Mundial do Veganismo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-02",
+    "name": "Finados",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "11-05",
+    "name": "Dia Nacional da Cultura",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-12",
+    "name": "Dia do Diretor Escolar",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-14",
+    "name": "Dia Mundial do Diabetes",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-15",
+    "name": "Proclamação da República",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "11-17",
+    "name": "Dia Mundial da Prematuridade",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-19",
+    "name": "Dia da Bandeira",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-20",
+    "name": "Dia da Consciência Negra",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "11-22",
+    "name": "Dia do Músico",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-25",
+    "name": "Dia Nacional do Doador de Sangue",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "11-30",
+    "name": "Dia do Evangélico (DF)",
+    "type": "Data local"
+  },
+  {
+    "date": "12-01",
+    "name": "Dia Mundial de Luta contra a AIDS",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-02",
+    "name": "Dia Nacional do Samba",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-03",
+    "name": "Dia Internacional da Pessoa com Deficiência",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-04",
+    "name": "Dia do Orientador Educacional",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-05",
+    "name": "Dia Internacional do Voluntário",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-09",
+    "name": "Dia do Fonoaudiólogo",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-10",
+    "name": "Dia dos Direitos Humanos",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-11",
+    "name": "Dia do Engenheiro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-13",
+    "name": "Dia do Marinheiro",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-21",
+    "name": "Início do Verão",
+    "type": "Comemorativa"
+  },
+  {
+    "date": "12-24",
+    "name": "Véspera de Natal",
+    "type": "Ponto facultativo — calendário federal"
+  },
+  {
+    "date": "12-25",
+    "name": "Natal",
+    "type": "Feriado nacional"
+  },
+  {
+    "date": "12-31",
+    "name": "Véspera de Ano-Novo",
+    "type": "Ponto facultativo — calendário federal"
+  },
+  {
+    "date": "2026-02-16",
+    "name": "Carnaval — segunda-feira",
+    "type": "Ponto facultativo",
+    "year": 2026
+  },
+  {
+    "date": "2026-02-17",
+    "name": "Carnaval — terça-feira",
+    "type": "Ponto facultativo",
+    "year": 2026
+  },
+  {
+    "date": "2026-02-18",
+    "name": "Quarta-feira de Cinzas",
+    "type": "Ponto facultativo",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-03",
+    "name": "Paixão de Cristo",
+    "type": "Feriado religioso — confirmar legislação local",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-05",
+    "name": "Páscoa",
+    "type": "Data religiosa",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-10",
+    "name": "Dia das Mães",
+    "type": "Comemorativa",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-04",
+    "name": "Corpus Christi",
+    "type": "Ponto facultativo federal; pode ser feriado local",
+    "year": 2026
+  },
+  {
+    "date": "2026-08-09",
+    "name": "Dia dos Pais",
+    "type": "Comemorativa",
+    "year": 2026
+  },
+  {
+    "date": "2026-11-27",
+    "name": "Black Friday",
+    "type": "Data comercial",
+    "year": 2026
+  }
+]

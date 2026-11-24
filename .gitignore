@@ -1,0 +1,12 @@
+﻿node_modules/
+dist/
+out/
+*.exe
+*.blockmap
+.env
+.env.*
+tokens.json
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

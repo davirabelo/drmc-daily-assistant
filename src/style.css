@@ -1,0 +1,1184 @@
+
+/* ======================================
+   CONFIGURAÇÕES GERAIS
+====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #10151d;
+  --surface: #19212c;
+  --surface-hover: #202b38;
+  --border: #2b3745;
+  --text: #f1f5f9;
+  --muted: #8995a5;
+  --accent: #a3e635;
+  --accent-dark: #7eae22;
+  --custom-accent: #60a5fa;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-container {
+  max-width: 850px;
+  margin: auto;
+  padding: 30px 38px;
+}
+
+/* ======================================
+   CABEÇALHO
+====================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--accent);
+  color: #17212f;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.brand h1 {
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ======================================
+   APRESENTAÇÃO
+====================================== */
+
+.welcome {
+  padding: 40px 0 30px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.welcome h2 {
+  font-size: 30px;
+  margin-top: 12px;
+  margin-bottom: 9px;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   CALENDÁRIO
+====================================== */
+
+.calendar-section {
+  margin-bottom: 35px;
+}
+
+.calendar-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* ======================================
+   NAVEGAÇÃO DO MÊS
+====================================== */
+
+.calendar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.calendar-current {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.calendar-current h4,
+#calendarMonth {
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.calendar-current span,
+#calendarYear {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.calendar-header button,
+.calendar-nav,
+#previousMonth,
+#nextMonth {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 40px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+
+  padding: 0;
+  margin: 0;
+
+  background: #273344;
+  border: 1px solid #3a485a;
+  border-radius: 10px;
+
+  color: var(--accent);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.calendar-header button:hover,
+#previousMonth:hover,
+#nextMonth:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #17212f;
+}
+
+.calendar-header button:active,
+#previousMonth:active,
+#nextMonth:active {
+  transform: scale(0.95);
+}
+
+.calendar-header button:focus-visible,
+#previousMonth:focus-visible,
+#nextMonth:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ======================================
+   DIAS DA SEMANA
+====================================== */
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 8px 0;
+}
+
+/* ======================================
+   GRADE DO CALENDÁRIO
+====================================== */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.calendar-day {
+  min-width: 0;
+  min-height: 62px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: #202b38;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.calendar-day:hover {
+  background: #2b3949;
+  border-color: #526176;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+.calendar-day.today {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.calendar-day.selected {
+  background: var(--accent);
+  color: #17212f;
+  border-color: var(--accent);
+  font-weight: 800;
+}
+
+.calendar-day .day-number {
+  font-size: 13px;
+}
+
+.calendar-day .event-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.calendar-day .event-indicator.custom {
+  background: var(--custom-accent);
+}
+
+.calendar-day.selected .event-indicator {
+  background: #17212f;
+}
+
+/* ======================================
+   LEGENDA
+====================================== */
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.legend-dot.today-dot {
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+.legend-dot.event-dot {
+  background: var(--accent);
+}
+
+.legend-dot.custom-event-dot {
+  background: var(--custom-accent);
+}
+
+/* ======================================
+   EVENTOS DO DIA
+====================================== */
+
+.selected-date {
+  margin-top: 25px;
+}
+
+.calendar-events {
+  margin-top: 15px;
+}
+
+.calendar-events h3 {
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+
+.selected-date-label {
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.calendar-event-item {
+  background: #202b38;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 9px;
+  padding: 13px;
+  margin-bottom: 9px;
+}
+
+.calendar-event-item h4 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.calendar-event-item p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.calendar-event-item.custom-event {
+  border-left-color: var(--custom-accent);
+}
+
+.calendar-empty {
+  background: #202b38;
+  border: 1px dashed var(--border);
+  border-radius: 9px;
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ======================================
+   EVENTOS PERSONALIZADOS
+====================================== */
+
+.custom-events-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.custom-events-description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 17px;
+}
+
+/* ======================================
+   BOTÕES
+====================================== */
+
+.primary-button,
+.secondary-button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 11px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #17212f;
+}
+
+.primary-button:hover {
+  background: #b5f34f;
+}
+
+.primary-button span {
+  font-size: 18px;
+  line-height: 12px;
+}
+
+.secondary-button {
+  background: #273344;
+  border-color: #3a485a;
+  color: var(--text);
+}
+
+.secondary-button:hover {
+  background: #354459;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ======================================
+   FORMULÁRIO DE EVENTOS
+====================================== */
+
+.custom-event-form-container {
+  margin-top: 18px;
+  padding: 18px;
+  background: #141c27;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.custom-event-form-container[hidden] {
+  display: none;
+}
+
+.form-heading {
+  margin-bottom: 20px;
+}
+
+.form-heading h4 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.form-heading span {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: #202b38;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #718096;
+}
+
+.form-group input[type="date"] {
+  color-scheme: dark;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 85px;
+  line-height: 1.5;
+}
+
+.custom-event-form-status {
+  min-height: 18px;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.custom-event-form-status.error {
+  color: #ff9292;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* ======================================
+   LISTA DE EVENTOS PERSONALIZADOS
+====================================== */
+
+.custom-events-list-section {
+  margin-top: 25px;
+}
+
+.custom-events-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.custom-events-list-heading h4 {
+  font-size: 13px;
+}
+
+.custom-events-list-heading span {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.custom-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.custom-events-list > p {
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  background: #202b38;
+  border: 1px dashed var(--border);
+  border-radius: 9px;
+}
+
+.custom-event-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px;
+  background: #202b38;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--custom-accent);
+  border-radius: 9px;
+}
+
+.custom-event-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.custom-event-info h5 {
+  font-size: 12px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+.custom-event-info p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.custom-event-category {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 7px;
+  color: #93c5fd;
+  background: #1e344b;
+  border-radius: 5px;
+  font-size: 9px;
+}
+
+.custom-event-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.custom-event-actions button {
+  padding: 7px 9px;
+  background: #273344;
+  color: var(--text);
+  border: 1px solid #3a485a;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-event-actions button:hover {
+  background: #354459;
+}
+
+.custom-event-actions .delete-event-button {
+  color: #ff9292;
+  border-color: #633b42;
+}
+
+.custom-event-actions .delete-event-button:hover {
+  background: #48272e;
+}
+
+/* ======================================
+   AVISO DE PROTEÇÃO
+====================================== */
+
+.official-events-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px;
+  background: #19251c;
+  border: 1px solid #304a32;
+  border-radius: 9px;
+}
+
+.notice-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #17212f;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.official-events-notice p {
+  color: #b5d88c;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   CONFIGURAÇÕES
+====================================== */
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.section-heading h3 {
+  font-size: 15px;
+}
+
+.section-heading span {
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.setting-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.setting-item:hover {
+  background: var(--surface-hover);
+  border-color: #465568;
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.setting-icon {
+  width: 38px;
+  height: 38px;
+  background: #273344;
+  color: var(--accent);
+  border-radius: 9px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.setting-info h4 {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.setting-info p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ======================================
+   INTERRUPTORES
+====================================== */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #465365;
+  border-radius: 30px;
+  transition: 0.25s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.switch input:checked + .slider {
+  background: var(--accent-dark);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+  background: white;
+}
+
+.switch input:focus-visible + .slider {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ======================================
+   STATUS E RODAPÉ
+====================================== */
+
+.save-status {
+  margin-top: 22px;
+  padding: 13px;
+  border-radius: 9px;
+  background: #19251c;
+  color: #b5d88c;
+  font-size: 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.save-status.error {
+  background: #301d20;
+  color: #ffb4b4;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* ======================================
+   ACESSIBILIDADE
+====================================== */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ======================================
+   RESPONSIVIDADE
+====================================== */
+
+@media (max-width: 600px) {
+
+  .app-container {
+    padding: 22px 17px;
+  }
+
+  .welcome h2 {
+    font-size: 25px;
+  }
+
+  .setting-item {
+    padding: 13px;
+  }
+
+  .setting-info {
+    gap: 10px;
+  }
+
+  .setting-info p {
+    max-width: 230px;
+  }
+
+  .calendar-container {
+    padding: 12px;
+  }
+
+  .calendar-grid,
+  .calendar-weekdays {
+    gap: 4px;
+  }
+
+  .calendar-day {
+    min-height: 48px;
+    border-radius: 7px;
+  }
+
+  .calendar-day .day-number {
+    font-size: 12px;
+  }
+
+  .calendar-legend {
+    gap: 12px;
+  }
+
+  .custom-events-section {
+    padding: 14px;
+  }
+
+  .custom-event-form-container {
+    padding: 13px;
+  }
+
+  .custom-event-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .custom-event-actions {
+    width: 100%;
+  }
+
+  .custom-event-actions button {
+    flex: 1;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .app-container {
+    padding: 18px 12px;
+  }
+
+  .calendar-header button {
+    flex-basis: 34px;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+  }
+
+  .calendar-current h4,
+  #calendarMonth {
+    font-size: 16px;
+  }
+
+  .calendar-day {
+    min-height: 42px;
+  }
+
+  .section-heading h3 {
+    font-size: 13px;
+  }
+
+  /* ==========================================
+   ALARMES DOS EVENTOS PERSONALIZADOS
+========================================== */
+
+.custom-alarm-section {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  padding: 16px;
+  background: #19212c;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.custom-alarm-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.custom-alarm-heading h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.custom-alarm-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  background: #273344;
+  color: var(--accent);
+  border-radius: 9px;
+  font-size: 18px;
+}
+
+.custom-alarm-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.custom-alarm-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px;
+  background: #202b38;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.custom-alarm-option:hover {
+  background: #273344;
+  border-color: #526176;
+}
+
+.custom-alarm-option:has(input:checked) {
+  background: #26351d;
+  border-color: var(--accent);
+}
+
+.custom-alarm-option input {
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.custom-alarm-option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.custom-alarm-option-content strong {
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.custom-alarm-option-content span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.custom-alarm-option:has(input:checked)
+.custom-alarm-option-content strong {
+  color: var(--accent);
+}
+
+.custom-alarm-info {
+  margin-top: 13px;
+  padding: 10px 11px;
+  background: #202b38;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.custom-alarm-info.error {
+  background: #301d20;
+  border-left-color: #ff7777;
+  color: #ffb4b4;
+}
+
+.custom-alarm-option input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE DOS ALARMES
+========================================== */
+
+@media (max-width: 600px) {
+  .custom-alarm-section {
+    padding: 13px;
+  }
+
+  .custom-alarm-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .custom-alarm-option {
+    min-height: 46px;
+    padding: 9px;
+  }
+}
+
+@media (max-width: 380px) {
+  .custom-alarm-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+}

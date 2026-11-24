@@ -1,0 +1,52 @@
+
+{
+  "name": "drmc-daily-assistant",
+  "version": "0.5.1",
+  "description": "Assistente diário de calendário e saudações da DRMc",
+  "main": "main.js",
+  "author": "DRMc",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.drmc.dailyassistant",
+    "productName": "DRMc Daily Assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "modules/**/*",
+      "data/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/drmc-app-icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerIcon": "assets/drmc-app-icon.ico",
+      "uninstallerIcon": "assets/drmc-app-icon.ico",
+      "include": "build/installer.nsh"
+    }
+  },
+  "allowScripts": {
+    "electron@37.2.0": true
+  },
+  "dependencies": {
+    "node-edge-tts": "^1.2.12"
+  }
+}

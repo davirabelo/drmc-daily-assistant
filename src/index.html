@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self'; script-src 'self';"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>DRMc Daily Assistant</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- CADASTRO INICIAL DO USUÁRIO -->
+
+    <div
+      id="profileSetupOverlay"
+      class="profile-setup-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="profileSetupTitle"
+      hidden
+    >
+      <form id="profileSetupForm" class="profile-setup-card">
+
+        <div class="profile-setup-brand">D</div>
+
+        <span class="eyebrow">DRMc DAILY ASSISTANT</span>
+
+        <h2 id="profileSetupTitle">
+          Como podemos te chamar?
+        </h2>
+
+        <p>
+          Vamos personalizar sua experiência.
+          Você poderá alterar seu nome depois nas configurações.
+        </p>
+
+        <div class="form-group">
+
+          <label for="firstRunName">
+            Seu nome
+          </label>
+
+          <input
+            type="text"
+            id="firstRunName"
+            maxlength="40"
+            autocomplete="given-name"
+            placeholder="Digite seu nome"
+            required
+          >
+
+        </div>
+
+        <div
+          id="profileSetupStatus"
+          class="profile-setup-status"
+          aria-live="polite"
+        ></div>
+
+        <button
+          type="submit"
+          id="saveProfileSetupBtn"
+          class="primary-button"
+        >
+          Continuar
+        </button>
+
+      </form>
+    </div>
+
+    <header class="header">
+
+      <div class="brand">
+
+        <div class="brand-icon">D</div>
+
+        <div>
+          <h1>DRMc</h1>
+          <span>DAILY ASSISTANT</span>
+        </div>
+
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        Sistema ativo
+      </div>
+
+    </header>
+
+    <main>
+
+      <section class="welcome">
+
+        <span class="eyebrow">CENTRAL DE CONTROLE</span>
+
+        <h2>Seu calendário.</h2>
+
+        <p>
+          Visualize datas importantes, eventos e
+          personalize seus lembretes.
+        </p>
+
+      </section>
+
+      <!-- CALENDÁRIO MENSAL -->
+
+      <section class="calendar-section">
+
+        <div class="section-heading">
+          <h3>Calendário mensal</h3>
+          <span>AGENDA</span>
+        </div>
+
+        <div class="calendar-container">
+
+          <div class="calendar-header">
+
+            <button
+              type="button"
+              id="previousMonth"
+              class="calendar-nav"
+              aria-label="Mês anterior"
+            >
+              &#8249;
+            </button>
+
+            <div class="calendar-current">
+              <h4 id="calendarMonth">Carregando...</h4>
+              <span id="calendarYear"></span>
+            </div>
+
+            <button
+              type="button"
+              id="nextMonth"
+              class="calendar-nav"
+              aria-label="Próximo mês"
+            >
+              &#8250;
+            </button>
+
+          </div>
+
+          <div class="calendar-weekdays">
+            <span>DOM</span>
+            <span>SEG</span>
+            <span>TER</span>
+            <span>QUA</span>
+            <span>QUI</span>
+            <span>SEX</span>
+            <span>SÁB</span>
+          </div>
+
+          <div
+            class="calendar-grid"
+            id="calendarGrid"
+          >
+            <!-- Dias gerados pelo renderer.js -->
+          </div>
+
+          <div class="calendar-legend">
+
+            <div class="legend-item">
+              <span class="legend-dot today-dot"></span>
+              Hoje
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot event-dot"></span>
+              Data especial
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot custom-event-dot"></span>
+              Personalizado
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- EVENTOS DO DIA -->
+
+        <div class="selected-date">
+
+          <div class="section-heading">
+            <h3>Eventos do dia</h3>
+            <span id="selectedDateLabel">SELECIONE UMA DATA</span>
+          </div>
+
+          <div
+            class="calendar-events"
+            id="calendarEvents"
+          >
+            <p>Selecione um dia para consultar os eventos.</p>
+          </div>
+
+        </div>
+
+        <!-- CADASTRO DE EVENTOS -->
+
+        <div class="custom-events-section">
+
+          <div class="section-heading">
+            <h3>Meus eventos</h3>
+            <span>PERSONALIZAÇÃO</span>
+          </div>
+
+          <p class="custom-events-description">
+            Cadastre compromissos, lembretes e datas importantes
+            que deseja acompanhar.
+          </p>
+
+          <button
+            type="button"
+            id="addCustomEventBtn"
+            class="primary-button"
+          >
+            <span>+</span>
+            Novo evento
+          </button>
+
+          <!-- FORMULÁRIO -->
+
+          <div
+            id="customEventFormContainer"
+            class="custom-event-form-container"
+            hidden
+          >
+
+            <form id="customEventForm">
+
+              <input
+                type="hidden"
+                id="customEventId"
+              >
+
+              <div class="form-heading">
+                <h4 id="customEventFormTitle">Novo evento</h4>
+                <span>EVENTO PERSONALIZADO</span>
+              </div>
+
+              <div class="form-group">
+
+                <label for="customEventName">
+                  Nome do evento
+                </label>
+
+                <input
+                  type="text"
+                  id="customEventName"
+                  maxlength="100"
+                  placeholder="Ex.: Consulta, reunião, aniversário"
+                  required
+                >
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="customEventDate">
+                  Data
+                </label>
+
+                <input
+                  type="date"
+                  id="customEventDate"
+                  required
+                >
+
+              </div>
+
+              <!-- HORÁRIO DO EVENTO -->
+
+              <div class="form-group custom-event-time-group">
+
+                <label for="customEventTime">
+                  Horário
+                </label>
+
+                <input
+                  type="time"
+                  id="customEventTime"
+                  step="60"
+                >
+
+                <small>
+                  Opcional. Informe o horário do compromisso.
+                </small>
+
+              </div>
+
+              <!-- ALARMES PERSONALIZADOS -->
+
+              <div class="custom-alarm-section">
+
+                <div class="custom-alarm-heading">
+                  <div>
+                    <h4>Alarmes e lembretes</h4>
+                    <p>
+                      Escolha quando deseja ser avisado.
+                    </p>
+                  </div>
+
+                  <span class="custom-alarm-icon">◷</span>
+                </div>
+
+                <div class="custom-alarm-options">
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="1440"
+                      id="customAlarm1440"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>24 horas antes</strong>
+                      <small>Um dia antes do compromisso</small>
+                    </span>
+                  </label>
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="60"
+                      id="customAlarm60"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>1 hora antes</strong>
+                      <small>Uma hora de antecedência</small>
+                    </span>
+                  </label>
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="30"
+                      id="customAlarm30"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>30 minutos antes</strong>
+                      <small>Meia hora de antecedência</small>
+                    </span>
+                  </label>
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="15"
+                      id="customAlarm15"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>15 minutos antes</strong>
+                      <small>Quinze minutos de antecedência</small>
+                    </span>
+                  </label>
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="5"
+                      id="customAlarm5"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>5 minutos antes</strong>
+                      <small>Alerta próximo do compromisso</small>
+                    </span>
+                  </label>
+
+                  <label class="custom-alarm-option">
+                    <input
+                      type="checkbox"
+                      name="customEventAlarm"
+                      value="0"
+                      id="customAlarm0"
+                    >
+
+                    <span class="custom-alarm-option-content">
+                      <strong>No horário do evento</strong>
+                      <small>Alerta quando o compromisso começar</small>
+                    </span>
+                  </label>
+
+                </div>
+
+                <div
+                  class="custom-alarm-info"
+                  id="customAlarmInfo"
+                  aria-live="polite"
+                >
+                  Informe um horário para ativar os alarmes.
+                </div>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="customEventType">
+                  Categoria
+                </label>
+
+                <input
+                  type="text"
+                  id="customEventType"
+                  maxlength="50"
+                  placeholder="Ex.: Pessoal, profissional, compromisso"
+                >
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="customEventDescription">
+                  Descrição
+                </label>
+
+                <textarea
+                  id="customEventDescription"
+                  maxlength="500"
+                  rows="3"
+                  placeholder="Informações adicionais sobre o evento..."
+                ></textarea>
+
+              </div>
+
+              <div
+                id="customEventFormStatus"
+                class="custom-event-form-status"
+                aria-live="polite"
+              ></div>
+
+              <div class="form-actions">
+
+                <button
+                  type="button"
+                  id="cancelCustomEventBtn"
+                  class="secondary-button"
+                >
+                  Cancelar
+                </button>
+
+                <button
+                  type="submit"
+                  id="saveCustomEventBtn"
+                  class="primary-button"
+                >
+                  Salvar evento
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <!-- LISTA DE EVENTOS PERSONALIZADOS -->
+
+          <div class="custom-events-list-section">
+
+            <div class="custom-events-list-heading">
+              <h4>Eventos cadastrados</h4>
+              <span id="customEventsCount">0 EVENTOS</span>
+            </div>
+
+            <div
+              id="customEventsList"
+              class="custom-events-list"
+            >
+              <p>Nenhum evento personalizado cadastrado.</p>
+            </div>
+
+          </div>
+
+          <div class="official-events-notice">
+            <span class="notice-icon">i</span>
+
+            <p>
+              As datas oficiais do calendário são protegidas.
+              Somente os eventos criados por você podem ser
+              editados ou excluídos.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONFIGURAÇÕES -->
+
+      <section class="settings-section">
+
+        <div class="section-heading">
+          <h3>Notificações e lembretes</h3>
+          <span>CONFIGURAÇÕES</span>
+        </div>
+
+        <div class="settings-list">
+
+          <!-- PERFIL DO USUÁRIO -->
+
+          <div class="setting-item profile-setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">DR</div>
+
+              <div>
+                <h4>Seu nome</h4>
+                <p>
+                  Personalize os cumprimentos falados do assistente.
+                </p>
+              </div>
+            </div>
+
+            <form
+              id="profileNameForm"
+              class="profile-name-form"
+            >
+
+              <input
+                type="text"
+                id="profileNameInput"
+                maxlength="40"
+                autocomplete="given-name"
+                placeholder="Seu nome"
+                aria-label="Seu nome"
+                required
+              >
+
+              <button
+                type="submit"
+                id="saveProfileNameBtn"
+                class="secondary-button"
+              >
+                Salvar nome
+              </button>
+
+            </form>
+
+            <div
+              id="profileNameStatus"
+              class="profile-name-status"
+              aria-live="polite"
+            ></div>
+
+          </div>
+
+          <!-- CUMPRIMENTO POR VOZ -->
+
+          <div class="setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">♫</div>
+
+              <div>
+                <h4>Cumprimento por voz</h4>
+                <p>
+                  Ativa ou desativa a saudação falada
+                  ao iniciar o aplicativo.
+                </p>
+              </div>
+            </div>
+
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="voiceGreetingEnabled"
+                checked
+              >
+              <span class="slider"></span>
+            </label>
+
+          </div>
+
+          <!-- LEMBRETE DE AMANHÃ -->
+
+          <div class="setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">01</div>
+
+              <div>
+                <h4>Lembrete de amanhã</h4>
+                <p>Mostra as datas importantes do próximo dia.</p>
+              </div>
+            </div>
+
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="tomorrowReminder"
+              >
+              <span class="slider"></span>
+            </label>
+
+          </div>
+
+          <!-- AVISOS DE FERIADOS -->
+
+          <div class="setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">02</div>
+
+              <div>
+                <h4>Avisos de feriados</h4>
+                <p>Controla a exibição de feriados e pontos facultativos.</p>
+              </div>
+            </div>
+
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="holidayReminders"
+              >
+              <span class="slider"></span>
+            </label>
+
+          </div>
+
+          <!-- DATAS PROFISSIONAIS -->
+
+          <div class="setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">03</div>
+
+              <div>
+                <h4>Datas profissionais</h4>
+                <p>Controla homenagens e datas de profissões.</p>
+              </div>
+            </div>
+
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="professionalReminders"
+              >
+              <span class="slider"></span>
+            </label>
+
+          </div>
+
+          <!-- AVISOS COM 7 DIAS -->
+
+          <div class="setting-item">
+
+            <div class="setting-info">
+              <div class="setting-icon">04</div>
+
+              <div>
+                <h4>Avisos com 7 dias</h4>
+                <p>Notificações de acontecimentos com uma semana de antecedência.</p>
+              </div>
+            </div>
+
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="weekReminder"
+              >
+              <span class="slider"></span>
+            </label>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <div class="save-status" id="saveStatus">
+        <span class="status-dot"></span>
+        Suas preferências são salvas automaticamente.
+      </div>
+
+    </main>
+
+    <footer>
+      <span>DRMc DAILY ASSISTANT</span>
+      <span>VERSÃO 0.5.0</span>
+    </footer>
+
+  </div>
+
+  <script src="renderer.js"></script>
+
+</body>
+
+</html>
